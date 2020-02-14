@@ -14,9 +14,6 @@ abstract class SpaceObject {
     var speed : Float = 0f
     var rotationSpeed : Float = 0f
 
-    var width : Float = 0f
-    var height : Float = 0f
-
     var shapex : FloatArray? = null
     var shapey : FloatArray? = null
 

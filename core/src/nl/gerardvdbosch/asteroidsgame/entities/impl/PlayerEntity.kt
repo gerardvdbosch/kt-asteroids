@@ -4,10 +4,12 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.MathUtils
 import nl.gerardvdbosch.asteroidsgame.KotlinGame
 import nl.gerardvdbosch.asteroidsgame.entities.SpaceObject
+import java.util.*
 import kotlin.math.sqrt
 
-class Player : SpaceObject() {
+class PlayerEntity : SpaceObject() {
 
+    var playerId : String = UUID.randomUUID().toString()
     var left : Boolean? = null
     var right : Boolean? = null
     var up: Boolean? = null
@@ -17,8 +19,8 @@ class Player : SpaceObject() {
     var deceleration: Float? = null
 
     init {
-        x = KotlinGame.WIDTH?.div(2)!!
-        y = KotlinGame.HEIGHT?.div(2)!!
+        x = 250f
+        y = 200f
 
         maxSpeed = 4f
         acceleration = 50f

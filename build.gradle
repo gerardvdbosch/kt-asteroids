@@ -11,7 +11,6 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-
     }
 }
 
@@ -19,7 +18,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "kt-game"
+        appName = "kt-nl.gerardvdbosch.asteroidsgame.http.game"
         gdxVersion = '1.9.10'
         roboVMVersion = '2.3.8'
         box2DLightsVersion = '1.4'
@@ -37,7 +36,7 @@ allprojects {
     }
 }
 
-project(":desktop") {
+project(":client") {
     apply plugin: "kotlin"
 
 
@@ -47,6 +46,7 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
         api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
     }
 }
 
@@ -58,5 +58,7 @@ project(":core") {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        compile group: 'io.netty', name: 'netty-all', version: '4.1.43.Final'
+        compile group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
     }
 }

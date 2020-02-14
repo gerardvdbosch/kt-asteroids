@@ -1,14 +1,14 @@
 package nl.gerardvdbosch.asteroidsgame.gamestates.impl
 
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
-import nl.gerardvdbosch.asteroidsgame.entities.impl.Player
+import nl.gerardvdbosch.asteroidsgame.entities.impl.PlayerEntity
 import nl.gerardvdbosch.asteroidsgame.gamestates.GameState
 import nl.gerardvdbosch.asteroidsgame.managers.utils.GameKeys
 import nl.gerardvdbosch.asteroidsgame.managers.GameStateManager
 
 class PlayState(gameStateManager: GameStateManager) : GameState(gameStateManager) {
 
-    var player : Player = Player()
+    var player : PlayerEntity = PlayerEntity()
     var sr : ShapeRenderer = ShapeRenderer()
 
     override fun init() {

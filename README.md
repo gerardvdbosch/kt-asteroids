@@ -1,2 +1,2 @@
 # kt-asteroids
-Kotlin asteroids game with Libgdx
+Kotlin asteroids nl.gerardvdbosch.asteroidsgame.server.game with Libgdx
